@@ -50,10 +50,10 @@ public class Main {
         long start3 = System.currentTimeMillis();
         Woerterbuch3 test3 = new Woerterbuch3(medienliste);
         long end3 = System.currentTimeMillis();
-
-        System.out.println("Took : " + ((end1 - start1) / 1000));
-        System.out.println("Took : " + ((end2 - start2) / 1000));
-        System.out.println("Took : " + ((end3 - start3) / 1000));
+        
+        System.out.println("Took : " + (end1 - start1) + "ms");
+        System.out.println("Took : " + (end2 - start2) + "ms");
+        System.out.println("Took : " + (end3 - start3) + "ms");
 
         String end = "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ";
 

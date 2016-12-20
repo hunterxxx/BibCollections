@@ -29,19 +29,17 @@ public class Woerterbuch1 implements Woerterbuch {
     }
 
     public void loeschen(String wort) {
-        int delete = -1;
         for (Woerterbucheintrag woerterbucheintrag : buch){
             if (wort.equals(woerterbucheintrag.getWort())){
                 buch.remove(wort);
                 break;
             }
         }
-        //buch.remove(delete);
     }
 
     public void print() {
         for(Woerterbucheintrag woerterbucheintrag : buch){
-            System.out.println(woerterbucheintrag.getWort());
+            System.out.println(woerterbucheintrag);
         }
         //System.out.println(woerterbucheintrag);
     }
