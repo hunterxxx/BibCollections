@@ -32,11 +32,11 @@ public class Woerterbuch1 implements Woerterbuch {
         int delete = -1;
         for (Woerterbucheintrag woerterbucheintrag : buch){
             if (wort.equals(woerterbucheintrag.getWort())){
-                delete = buch.indexOf(woerterbucheintrag);
+                buch.remove(wort);
                 break;
             }
         }
-        buch.remove(delete);
+        //buch.remove(delete);
     }
 
     public void print() {
