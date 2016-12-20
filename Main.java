@@ -39,10 +39,6 @@ public class Main {
         // Liste der (englischen) Stoppworte
         HashSet<String> stoppworte = BibliothekDB.getStoppworte();
 
-        bib.getMedien();
-
-        String end = "******************************************************";
-
         long start1 = System.currentTimeMillis();
         Woerterbuch1 test1 = new Woerterbuch1(medienliste);
         long end1 = System.currentTimeMillis();
@@ -58,6 +54,9 @@ public class Main {
         System.out.println("Took : " + ((end1 - start1) / 1000));
         System.out.println("Took : " + ((end2 - start2) / 1000));
         System.out.println("Took : " + ((end3 - start3) / 1000));
+
+        String end = "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ";
+
         start1 = System.currentTimeMillis();
         for (String stoppwort : stoppworte) {
             test1.loeschen(end);
@@ -73,7 +72,13 @@ public class Main {
             test3.loeschen(end);
         }
         end3 = System.currentTimeMillis();
+
+        System.out.println("loeschen des Woerrterbuch1: " + (end1 - start1) + "ms");
+        System.out.println("loeschen des Woerrterbuch2: " + (end2 - start2) + "ms");
+        System.out.println("loeschen des Woerrterbuch3: " + (end3 - start3) + "ms");
         
+        bib.getBook().print();
+
 //        Woerterbucheintrag www = new Woerterbucheintrag();
         /* w1 test
                 Woerterbuch1 woerterbuch1 = new Woerterbuch1(medienliste);

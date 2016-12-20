@@ -41,7 +41,7 @@ public class Woerterbuch1 implements Woerterbuch {
 
     public void print() {
         for(Woerterbucheintrag woerterbucheintrag : buch){
-            System.out.println(woerterbucheintrag);
+            System.out.println(woerterbucheintrag.getWort());
         }
         //System.out.println(woerterbucheintrag);
     }
